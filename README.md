@@ -7,7 +7,7 @@
 - сторінка з оголошеннями, які були додані користувачем в улюблені Зовнішній вигляд програми повинен складатися з cайдбару та області перегляду.
   
 ## Технічне завдання
-1. Відповідно до макету реалізувати картку оголошення про здачу авто в оренду.
+1. Відповідно до [макету](https://www.figma.com/file/XhC8FSCfAkraEF5l7Hx4fL/Test?type=design&node-id=0-1&mode=design&t=Ed3b0heFOmE2LSXU-0) реалізувати картку оголошення про здачу авто в оренду.
 2. На першій сторінці каталогу має рендеритися 8 оголошень, а їх решта - по кліку на кнопку `Load more`.
 3. У разі кліку по кнопці у вигляді “серця” на картці оголошення воно має додаватися до списку улюблених, а колір кнопки змінюватися.
 4. При оновленні сторінки має фіксуватись кінцевий результат дій користувача. Тобто, якщо додати оголошення в улюблені та оновити сторінку - то кнопка все одно залишається в стані “улюбленого оголошення” із відповідним кольором.
@@ -26,7 +26,7 @@
 
 Advert
 
-1. Створіть `advert` в **Mockapi** з наступними полями: id, year, make, model, type, img, description, fuelConsumption, engineSize, accessories, functionalities, rentalPrice, rentalCompany, address, rentalConditions, mileage (див. скріншот нижче). Для наповнення колекції можна взяти adverts.json <img src="https://github.com/EuJinnLucaShow/car-rental/blob/main/assets/2.png" /><br> 
+1. Створіть `advert` в **Mockapi** з наступними полями: id, year, make, model, type, img, description, fuelConsumption, engineSize, accessories, functionalities, rentalPrice, rentalCompany, address, rentalConditions, mileage (див. скріншот нижче). Для наповнення колекції можна взяти [adverts.json](https://drive.google.com/file/d/1sDtZQX4awbRiqa5mSagngqKBZeMMRUMO/view) <img src="https://github.com/EuJinnLucaShow/car-rental/blob/main/assets/2.png" /><br> 
 2. Зображення авто можете підібрати самостійно.
 3. В базі має бути від 32 оголошень з різними значеннями (на ваш розсуд). Реалізована пагінація, де одна сторінка пагінації повинна вміщати 8 оголошень. 
 
@@ -34,7 +34,7 @@ Advert
 
 Додай фільтрацію:
 
-1. `dropdown` із марками автомобіля makes.json - показати оголошення з автівками відповідної марки
+1. `dropdown` із марками автомобіля [makes.json](https://drive.google.com/file/d/1ywi6jdoqq0llsd2yDcRKwuLhuL3ds_5z/view) - показати оголошення з автівками відповідної марки
 2. `dropdown` із цінами за годину оренди авто (крок 10$) - показати оголошення з автівками, ціна за оренду яких належить до діапазону цін, обраних користувачем
 3. група `input` для визначення діапазону пробігу, в межах якого користувач шукатиме оголошення
 
