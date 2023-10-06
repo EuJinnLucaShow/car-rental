@@ -1,5 +1,6 @@
 import Button from 'components/Button/Button';
 import IconCheckbox from 'components/Favorite/Favorite';
+import SelectCar from 'components/SelectCar/SelectCar';
 
 function HomePage() {
   return (
@@ -22,7 +23,12 @@ function HomePage() {
         onClick={() => alert('Click button')}
         width="168px"
       />
+      <br />
+      <br />
       <IconCheckbox />
+      <br />
+      <br />
+      <SelectCar />
     </>
   );
 }
