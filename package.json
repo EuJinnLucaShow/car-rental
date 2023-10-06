@@ -1,12 +1,18 @@
 {
   "name": "car-rental",
   "version": "0.1.0",
-   "homepage": "https://EuJinnLucaShow.github.io/car-rental/",
+  "homepage": "https://EuJinnLucaShow.github.io/car-rental/",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/roboto": "^5.0.8",
+    "@mui/icons-material": "^5.14.12",
+    "@mui/material": "^5.14.12",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -17,7 +23,7 @@
     "build": "react-scripts build",
     "deploy": "gh-pages -d dist",
     "eject": "react-scripts eject",
-     "lint:js": "eslint src/**/*.{js,jsx}"
+    "lint:js": "eslint src/**/*.{js,jsx}"
   },
   "eslintConfig": {
     "extends": [
