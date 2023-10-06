@@ -2,15 +2,15 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 
-export default function ButtonUsage({ text, onClick }) {
+export default function ButtonUsage({ text, onClick, width }) {
   const StylesButton = styled(Button)(({ theme }) => ({
-    width: '274px',
+    width: width,
     padding: '12px 0 12px 0',
     borderRadius: '12px',
-    color: theme.palette.getContrastText('#0B44CD'),
-    backgroundColor: '#0B44CD',
+    color: theme.palette.getContrastText('#3470FF'),
+    backgroundColor: '#3470FF',
     '&:hover': {
-      backgroundColor: '#3470FF',
+      backgroundColor: '#0B44CD',
     },
   }));
 

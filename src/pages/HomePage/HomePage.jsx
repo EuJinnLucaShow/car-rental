@@ -9,7 +9,18 @@ function HomePage() {
         <br />
         How do you do?
       </p>
-      <Button text="Learn more" onClick={() => alert('Click button')} />
+      <Button
+        text="Learn more"
+        onClick={() => alert('Click button')}
+        width="274px"
+      />
+      <br />
+      <br />
+      <Button
+        text="Rental car"
+        onClick={() => alert('Click button')}
+        width="168px"
+      />
     </>
   );
 }
