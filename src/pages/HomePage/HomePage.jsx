@@ -1,4 +1,5 @@
 import Button from 'components/Button/Button';
+import IconCheckbox from 'components/Favorite/Favorite';
 
 function HomePage() {
   return (
@@ -21,6 +22,7 @@ function HomePage() {
         onClick={() => alert('Click button')}
         width="168px"
       />
+      <IconCheckbox />
     </>
   );
 }
