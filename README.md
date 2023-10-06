@@ -28,8 +28,9 @@ Advert
 
 1. Створіть advert в Mockapi з наступними полями: id, year, make, model, type, img, description, fuelConsumption, engineSize, accessories, functionalities, rentalPrice, rentalCompany, address, rentalConditions, mileage (див. скріншот нижче). Для наповнення колекції можна взяти adverts.json
  <img src="https://github.com/EuJinnLucaShow/car-rental/blob/main/assets/2.png" />
+ 
 2. Зображення авто можете підібрати самостійно.
-3. В базі має бути від 32 оголошень з різними значеннями (на ваш розсуд). Реалізована пагінація, де одна сторінка пагінації повинна вміщати 8 оголошень.
+3. В базі має бути від 32 оголошень з різними значеннями (на ваш розсуд). Реалізована пагінація, де одна сторінка пагінації повинна вміщати 8 оголошень.4. 
 
 ## Додаткове завдання
 
