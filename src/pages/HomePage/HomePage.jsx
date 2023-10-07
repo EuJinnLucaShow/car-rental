@@ -1,16 +1,21 @@
 import Button from 'components/Button/Button';
-import IconCheckbox from 'components/Favorite/Favorite';
+import CardItem from 'components/CardItem/CardItem';
+import InputForm from 'components/InputForm/InputForm';
+
+import SelectAvto from 'components/SelectAvto/SelectAvto';
 import SelectCar from 'components/SelectCar/SelectCar';
 
 function HomePage() {
   return (
     <>
-      <h1>HomePage</h1>
-      <p>
-        Hello there.
-        <br />
-        How do you do?
-      </p>
+      <CardItem />
+
+      <InputForm />
+
+      <SelectCar />
+      <SelectAvto />
+      <br />
+      <br />
       <Button
         text="Learn more"
         onClick={() => alert('Click button')}
@@ -25,10 +30,13 @@ function HomePage() {
       />
       <br />
       <br />
-      <IconCheckbox />
+      <Button
+        text="Search"
+        onClick={() => alert('Click button')}
+        width="135px"
+      />
       <br />
       <br />
-      <SelectCar />
     </>
   );
 }

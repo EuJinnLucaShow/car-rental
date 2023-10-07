@@ -32,35 +32,56 @@ function getStyles(model, carModel, theme) {
 export default function SelectCar() {
   const theme = useTheme();
   const [carModel, setCarModel] = React.useState([]);
+  const [price, setPrice] = React.useState([]);
   const uniqueCarMakes = [...new Set(advertsCars.map(cars => cars.make))];
+  const prices = [
+    '$10',
+    '$20',
+    '$30',
+    '$40',
+    '$50',
+    '$60',
+    '$70',
+    '$80',
+    '$90',
+    '$100',
+  ];
 
   React.useEffect(() => {
-    console.log(advertsCars.filter(cars => carModel.includes(cars.make)));
-  }, [carModel]);
+    const selectCars = advertsCars.filter(cars => carModel.includes(cars.make));
+    const selectPrice = selectCars.filter(cars =>
+      price.includes(cars.rentalPrice)
+    );
+    console.log(selectPrice);
+  }, [carModel, price]);
 
-  const handleChange = event => {
+  const handleChangeCar = event => {
     const {
       target: { value },
     } = event;
-    setCarModel(
-      // On autofill we get a stringified value.
-      typeof value === 'string' ? value.split(',') : value
-    );
+    setCarModel(typeof value === 'string' ? value.split(',') : value);
+  };
+
+  const handleChangePrice = event => {
+    const {
+      target: { value },
+    } = event;
+    setPrice(typeof value === 'string' ? value.split(',') : value);
   };
 
   return (
     <div>
       <FormControl sx={{ m: 1, width: 225 }}>
-        <InputLabel id="demo-multiple-name-label">Car brand</InputLabel>
+        <InputLabel id="сar-brand-label">Car brand</InputLabel>
         <Select
-          labelId="demo-multiple-name-label"
-          id="demo-multiple-name"
+          labelId="сar-brand-label"
+          id="сar-brand"
           multiple
           value={carModel}
-          onChange={handleChange}
+          onChange={handleChangeCar}
           input={
             <OutlinedInput
-              label="Car brand"
+              label="сar-brand"
               sx={{
                 borderRadius: '14px',
                 background: '#F7F7FB',
@@ -76,6 +97,36 @@ export default function SelectCar() {
               style={getStyles(make, carModel, theme)}
             >
               {make}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
+      <FormControl sx={{ m: 1, width: 135 }}>
+        <InputLabel id="price-1-hour-label">Price/ 1 hour</InputLabel>
+        <Select
+          labelId="price-1-hour-label"
+          id="price-1-hour"
+          multiple
+          value={price}
+          onChange={handleChangePrice}
+          input={
+            <OutlinedInput
+              label="price-1-hour"
+              sx={{
+                borderRadius: '14px',
+                background: '#F7F7FB',
+              }}
+            />
+          }
+          MenuProps={MenuProps}
+        >
+          {prices.map(cost => (
+            <MenuItem
+              key={cost}
+              value={cost}
+              style={getStyles(cost, price, theme)}
+            >
+              {cost}
             </MenuItem>
           ))}
         </Select>

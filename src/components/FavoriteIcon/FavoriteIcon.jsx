@@ -6,16 +6,18 @@ import { styled } from '@mui/material/styles';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
-export default function IconCheckbox() {
+export default function FavoriteIcon() {
   const StylesFavorite = styled(Favorite)({
     fill: '#3470FF',
   });
 
   return (
-    <Checkbox
-      {...label}
-      icon={<FavoriteBorder />}
-      checkedIcon={<StylesFavorite />}
-    />
+    <div style={{ position: 'absolute', top: '0', right: '0' }}>
+      <Checkbox
+        {...label}
+        icon={<FavoriteBorder />}
+        checkedIcon={<StylesFavorite />}
+      />
+    </div>
   );
 }
