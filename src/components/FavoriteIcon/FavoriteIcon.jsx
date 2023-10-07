@@ -11,7 +11,7 @@ export default function FavoriteIcon() {
     fill: '#3470FF',
   });
 
-  const StylesFavoriteBorder = styled(Favorite)({
+  const StylesFavoriteBorder = styled(FavoriteBorder)({
     stroke: '#FFFFFFCC',
   });
 
