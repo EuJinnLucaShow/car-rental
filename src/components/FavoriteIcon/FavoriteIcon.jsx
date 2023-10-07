@@ -11,11 +11,15 @@ export default function FavoriteIcon() {
     fill: '#3470FF',
   });
 
+  const StylesFavoriteBorder = styled(Favorite)({
+    stroke: 'white',
+  });
+
   return (
     <div style={{ position: 'absolute', top: '0', right: '0' }}>
       <Checkbox
         {...label}
-        icon={<FavoriteBorder />}
+        icon={<StylesFavoriteBorder />}
         checkedIcon={<StylesFavorite />}
       />
     </div>
