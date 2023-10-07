@@ -12,7 +12,7 @@ export default function FavoriteIcon() {
   });
 
   const StylesFavoriteBorder = styled(FavoriteBorder)({
-    stroke: '#FFFFFFCC',
+    fill: '#FFFFFFCC',
   });
 
   return (
