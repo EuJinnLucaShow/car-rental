@@ -28,7 +28,7 @@ export const NavMenu = styled(NavLink)`
   align-items: center;
   border-radius: 12px;
   background: #f7f7fb;
-  color: #121417
+  color: #121417;
   font-family: 'Manrope';
   font-size: 14px;
   font-style: normal;
@@ -36,7 +36,7 @@ export const NavMenu = styled(NavLink)`
   line-height: 20px; /* 142.857% */
 
   &.active {
-    color: #ffffffcc;
+    color: #fff;
     background: #3470ff;
   }
 

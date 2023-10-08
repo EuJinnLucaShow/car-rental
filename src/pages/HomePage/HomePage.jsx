@@ -1,4 +1,4 @@
-import HeroImage from '../../images/explore-our-vehicles.avif';
+import HeroImage from '../../images/explore-our-vehicles.png';
 
 function HomePage() {
   return (
