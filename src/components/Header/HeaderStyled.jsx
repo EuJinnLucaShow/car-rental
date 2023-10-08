@@ -40,8 +40,8 @@ export const NavMenu = styled(NavLink)`
     background: #3470ff;
   }
 
-  &:after,
-  &:before {
-    transition: color 0.5s, width 0.5s, left 0.5s, right 0.5s;
+  &:hover {
+    color: #fff;
+    background: #3470ff;
   }
 `;
