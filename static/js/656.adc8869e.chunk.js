@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkcar_rental=self.webpackChunkcar_rental||[]).push([[656],{5225:function(r,e,a){a.r(e),a.d(e,{default:function(){return c}});var n=a.p+"static/media/explore-our-vehicles.7289c9d0645f4647f704.avif",t=a(184);var c=function(){return(0,t.jsx)(t.Fragment,{children:(0,t.jsx)("div",{children:(0,t.jsx)("img",{src:n,alt:"Cars",width:"100%"})})})}}}]);
-//# sourceMappingURL=656.adc8869e.chunk.js.map
