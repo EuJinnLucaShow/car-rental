@@ -1,11 +1,10 @@
 import styled from '@emotion/styled';
 
 export const FooterWrapper = styled.footer`
-  color: #9ad9e6;
-  padding: 12px;
-  margin-bottom: 24px;
+  height: 50px;
+  background-color: #f0f0fa;
 `;
 
 export const Container = styled.div`
-  /*  */
+  position: relative;
 `;

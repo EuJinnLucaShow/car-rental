@@ -1,13 +1,10 @@
+const { Wrapper } = require('./FavoritePage.styled');
+
 function FavoritePage() {
   return (
-    <>
+    <Wrapper>
       <h1>Favorite Page</h1>
-      <p>
-        Hello there.
-        <br />
-        How do you do?
-      </p>
-    </>
+    </Wrapper>
   );
 }
 
