@@ -7,7 +7,7 @@ import { Loader } from '../Loader/Loader';
 
 export default function Layout() {
   return (
-    <div className="wrapper">
+    <div>
       <Header />
       <Suspense fallback={<Loader />}>
         <main>
