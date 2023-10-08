@@ -1,10 +1,12 @@
-import Button from 'components/Button/Button';
+import Buttons from 'components/Buttons/Buttons';
 import FavoriteIcon from '../FavoriteIcon/FavoriteIcon';
 import {
   Wrapper,
   WrapperImage,
   Image,
   WrapperTitle,
+  Title,
+  Price,
   Description,
 } from './CardItem.styled';
 
@@ -37,24 +39,26 @@ export default function CardItem() {
         <Image src={car.img} alt="Car" />
       </WrapperImage>
       <WrapperTitle>
-        <h3>
-          {car.make}, {car.year}
-        </h3>
-        <p> {car.rentalPrice}</p>
+        <Title>
+          {car.make} <span style={{ color: '#3470FF' }}>{car.model}</span>,{' '}
+          {car.year}
+        </Title>
+        <Price>{car.rentalPrice}</Price>
       </WrapperTitle>
       <Description>
-        <li>Lviv</li>
-        <li>Ukraine</li>
-        <li>Premium Auto Rentals</li>
-        <li>Premium</li>
-        <li>Suv</li>
-        <li>XC90</li>
-        <li>9584</li>
-        <li>IntelliSafe advanced safety features</li>
+        <li>{car.address.split(',')[1]}</li>
+        <li>{car.address.split(',')[2]}</li>
+        <li>{car.rentalCompany}</li>
+        <li>{car.type}</li>
+        <li>{car.model}</li>
+        <li>{car.mileage}</li>
+        <li>{car.accessories[0]}</li>
       </Description>
-      <Button
+      <Buttons
         text="Learn more"
-        onClick={() => alert('Click button')}
+        onClick={() => {
+          window.location.href = 'tel:+380730000000';
+        }}
         width="274px"
       />
     </Wrapper>

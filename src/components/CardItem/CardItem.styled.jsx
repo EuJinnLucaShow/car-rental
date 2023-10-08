@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
   height: 426px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 14px;
   flex-shrink: 0;
 `;
 
@@ -14,6 +13,7 @@ export const WrapperImage = styled.div`
   position: relative;
   width: 274px;
   height: 268px;
+  margin-bottom: 14px;
 `;
 
 export const Image = styled.img`
@@ -29,8 +29,26 @@ export const WrapperTitle = styled.div`
   color: #121417;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
   padding-right: 8px;
+  margin-bottom: 8px;
+`;
+
+export const Title = styled.h3`
+  color: #121417;
+  font-family: 'Manrope';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+`;
+
+export const Price = styled.p`
+  color: #121417;
+  font-family: 'Manrope';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
 `;
 
 export const Description = styled.ul`
@@ -42,9 +60,18 @@ export const Description = styled.ul`
   line-height: 1.5;
   row-gap: 4px;
   width: fit-content;
+  margin-bottom: 24px;
   & > li:not(:last-child) {
     border-right: 1px solid rgba(18, 20, 23, 0.1);
     margin-right: 6px;
     padding-right: 6px;
+  }
+  & li {
+    color: rgba(18, 20, 23, 0.5);
+    font-family: 'Manrope';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
   }
 `;

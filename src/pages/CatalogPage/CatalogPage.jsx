@@ -1,12 +1,10 @@
+import CardItem from "components/CardItem/CardItem";
+
 function CatalogPage() {
   return (
     <>
       <h1>Catalog Page</h1>
-      <p>
-        Hello there.
-        <br />
-        How do you do?
-      </p>
+      <CardItem />
     </>
   );
 }

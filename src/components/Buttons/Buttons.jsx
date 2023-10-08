@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
+import { Text } from './Buttons.styled'
 
-export default function ButtonUsage({ text, onClick, width }) {
+export default function Buttons({ text, onClick, width }) {
   const StylesButton = styled(Button)(({ theme }) => ({
     width: width,
     padding: '12px 0 12px 0',
@@ -16,7 +17,7 @@ export default function ButtonUsage({ text, onClick, width }) {
 
   return (
     <StylesButton variant="contained" onClick={onClick}>
-      {text}
+      <Text>{text}</Text>
     </StylesButton>
   );
 }
