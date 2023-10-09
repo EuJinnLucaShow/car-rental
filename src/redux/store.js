@@ -12,11 +12,11 @@ import {
 } from 'redux-persist';
 
 import catalogReducer from './catalogSlice';
-import { carsApi } from './operations';
+import { api } from './operations';
 
 const reducers = combineReducers({
   catalogReducer,
-  [carsApi.reducerPath]: carsApi.reducer,
+  [api.reducerPath]: api.reducer,
 });
 
 const persistConfig = {
@@ -31,11 +31,10 @@ export const store = configureStore({
   reducer: persistedReducer,
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
-      // Redux persist
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }).concat(carsApi.middleware),
+    }).concat(api.middleware),
 });
 
 export let persistor = persistStore(store);

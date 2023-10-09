@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-export const carsApi = createApi({
-  reducerPath: 'carsApi',
+export const api = createApi({
+  reducerPath: 'api',
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://6523a229ea560a22a4e894dd.mockapi.io/',
   }),
@@ -12,4 +12,4 @@ export const carsApi = createApi({
   }),
 });
 
-export const { useGetCarsByPageQuery } = carsApi;
+export const { useGetCarsByPageQuery } = api;

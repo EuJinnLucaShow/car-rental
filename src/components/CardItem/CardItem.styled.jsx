@@ -34,6 +34,9 @@ export const WrapperTitle = styled.div`
 `;
 
 export const Title = styled.h3`
+  width: 274px;
+  height: 24px;
+  overflow: hidden;
   color: #121417;
   font-family: 'Manrope';
   font-size: 16px;
@@ -54,6 +57,9 @@ export const Price = styled.p`
 export const Description = styled.ul`
   color: rgba(18, 20, 23, 0.5);
   display: flex;
+  width: 274px;
+  height: 40px;
+  overflow: hidden;
   flex-direction: row;
   flex-wrap: wrap;
   font-weight: 400;

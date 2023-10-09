@@ -36,8 +36,8 @@ function CatalogPage() {
           <Loader />
         ) : catalog.length > 0 ? (
           <>
-            {catalog.map(car => (
-              <CardItem key={car.id} data={car} />
+            {catalog.map((car, index) => (
+              <CardItem key={index} data={car} />
             ))}
           </>
         ) : null}
