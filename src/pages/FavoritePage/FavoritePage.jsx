@@ -1,10 +1,15 @@
-const { Wrapper } = require('./FavoritePage.styled');
+import SelectForm from 'components/Select/Select';
+
+import { WrapperSelect, Wrapper } from './FavoritePage.styled';
 
 function FavoritePage() {
   return (
-    <Wrapper>
-      <h1>Favorite Page</h1>
-    </Wrapper>
+    <>
+      <WrapperSelect>
+        <SelectForm />
+      </WrapperSelect>
+      <Wrapper></Wrapper>
+    </>
   );
 }
 
