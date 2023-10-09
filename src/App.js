@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { lazy } from 'react';
 
 import Layout from './components/Layout/Layout';
@@ -14,7 +14,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="catalog" element={<Catalog />} />
         <Route path="favorites" element={<Favorites />} />
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Route>
     </Routes>
   );
