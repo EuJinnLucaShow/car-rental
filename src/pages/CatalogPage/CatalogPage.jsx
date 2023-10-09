@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 
 import CardItem from 'components/CardItem/CardItem';
 import SelectForm from 'components/Select/Select';
-import { useGetCarsByPageQuery } from '../../redax/operations';
+import { useGetCarsByPageQuery } from '../../redux/operations';
 import { Loader } from 'components/Loader/Loader';
 
 import { Wrapper, WrapperSelect } from './CatalogPage.styled';
