@@ -1,7 +1,7 @@
 {
   "name": "car-rental",
   "version": "0.1.0",
-  "homepage": "https://EuJinnLucaShow.github.io/car-rental/",
+  "homepage": "https://EuJinnLucaShow.github.io/car-rental",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
