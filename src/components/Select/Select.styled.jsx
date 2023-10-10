@@ -45,6 +45,9 @@ export const InputLeft = styled.input`
   font-family: 'Manrope';
   color: rgba(18, 20, 23, 1);
   font-size: 18px;
+  &:focus {
+    outline-color: #3470ff;
+  }
 `;
 
 export const InputRight = styled.input`
@@ -60,6 +63,9 @@ export const InputRight = styled.input`
   font-family: 'Manrope';
   color: rgba(18, 20, 23, 1);
   font-size: 18px;
+  &:focus {
+    outline-color: #3470ff;
+  }
 `;
 
 export const UnitLeft = styled.span`
