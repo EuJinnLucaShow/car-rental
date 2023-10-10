@@ -16,4 +16,5 @@ export const Wrapper = styled.div`
   padding-left: 128px;
   padding-right: 128px;
   margin-top: 50px;
+  margin-bottom: 50px;
 `;

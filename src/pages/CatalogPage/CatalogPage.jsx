@@ -119,7 +119,7 @@ function CatalogPage() {
         ) : catalog.length > 0 ? (
           catalog.map((car, index) => <CardItem key={index} data={car} />)
         ) : null}
-        {data && data.length >= 8 && (
+        {!isFiltering && data && data.length >= 8 && (
           <Button variant="text" onClick={loadMore} disabled={isFetching}>
             Load more
           </Button>
