@@ -1,4 +1,5 @@
 import Buttons from 'components/Buttons/Buttons';
+import BasicModal from 'components/Modal/Modal';
 import FavoriteIcon from '../FavoriteIcon/FavoriteIcon';
 import {
   Wrapper,
@@ -9,49 +10,36 @@ import {
   Price,
   Description,
 } from './CardItem.styled';
+import { useState } from 'react';
 
-export default function CardItem({
-  data: {
-    img,
-    make,
-    model,
-    year,
-    rentalPrice,
-    address,
-    rentalCompany,
-    type,
-    mileage,
-    accessories,
-  },
-}) {
+export default function CardItem({ data }) {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <Wrapper>
       <WrapperImage>
         <FavoriteIcon />
-        <Image src={img} alt="Car" />
+        <Image src={data.img} alt="Car" />
       </WrapperImage>
       <WrapperTitle>
         <Title>
-          {make} <span style={{ color: '#3470FF' }}>{model}</span>, {year}
+          {data.make} <span style={{ color: '#3470FF' }}>{data.model}</span>,{' '}
+          {data.year}
         </Title>
-        <Price>{rentalPrice}</Price>
+        <Price>{data.rentalPrice}</Price>
       </WrapperTitle>
       <Description>
-        <li>{address.split(',')[1]}</li>
-        <li>{address.split(',')[2]}</li>
-        <li>{rentalCompany}</li>
-        <li>{type}</li>
-        <li>{model}</li>
-        <li>{mileage}</li>
-        <li>{accessories[0]}</li>
+        <li>{data.address.split(',')[1]}</li>
+        <li>{data.address.split(',')[2]}</li>
+        <li>{data.rentalCompany}</li>
+        <li>{data.type}</li>
+        <li>{data.model}</li>
+        <li>{data.mileage}</li>
+        <li>{data.accessories[0]}</li>
       </Description>
-      <Buttons
-        text="Learn more"
-        onClick={() => {
-          window.location.href = 'tel:+380730000000';
-        }}
-        width="274px"
-      />
+      <Buttons text="Learn more" onClick={handleOpen} width="274px" />
+      {open && <BasicModal open={open} onClose={handleClose} data={data} />}
     </Wrapper>
   );
 }
