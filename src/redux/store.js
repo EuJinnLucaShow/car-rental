@@ -11,12 +11,12 @@ import {
   REGISTER,
 } from 'redux-persist';
 
-import catalogReducer from './catalogSlice';
+import { filtersReducer } from './filtersSlice';
 import { api } from './operations';
 
 const reducers = combineReducers({
-  catalogReducer,
   [api.reducerPath]: api.reducer,
+  filters: filtersReducer,
 });
 
 const persistConfig = {
