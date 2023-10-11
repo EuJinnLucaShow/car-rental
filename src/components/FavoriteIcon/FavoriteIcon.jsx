@@ -3,10 +3,12 @@ import Checkbox from '@mui/material/Checkbox';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
 import { styled } from '@mui/material/styles';
+import { useUpdateFavoriteAdvertByIdMutation } from 'redux/operations';
 
-const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+export default function FavoriteIcon({ data }) {
+  const { id, favorite } = data;
+  const [favChecked, setFavChecked] = React.useState(favorite);
 
-export default function FavoriteIcon() {
   const StylesFavorite = styled(Favorite)({
     fill: '#3470FF',
   });
@@ -15,12 +17,27 @@ export default function FavoriteIcon() {
     fill: '#FFFFFFCC',
   });
 
+  const [updateFavoriteAdvertById] = useUpdateFavoriteAdvertByIdMutation();
+
+  const handleToggleFavorite = async ({ id, favorite }) => {
+    try {
+      // Toggle the favorite status
+      const newFavoriteStatus = !favorite;
+      // Call the mutation to update the favorite status
+      await updateFavoriteAdvertById({ id, favorite: newFavoriteStatus });
+      setFavChecked(newFavoriteStatus);
+    } catch (error) {
+      console.log('Sorry something wrong');
+    }
+  };
+
   return (
     <div style={{ position: 'absolute', top: '0', right: '0' }}>
       <Checkbox
-        {...label}
         icon={<StylesFavoriteBorder />}
         checkedIcon={<StylesFavorite />}
+        checked={favChecked} // Assuming 'favorite' is a boolean property in the 'data' object
+        onChange={() => handleToggleFavorite({ id, favorite })}
       />
     </div>
   );

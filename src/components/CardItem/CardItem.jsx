@@ -19,7 +19,7 @@ export default function CardItem({ data }) {
   return (
     <Wrapper>
       <WrapperImage>
-        <FavoriteIcon />
+        <FavoriteIcon data={data} />
         <Image src={data.img} alt="Car" />
       </WrapperImage>
       <WrapperTitle>
