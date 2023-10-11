@@ -13,7 +13,7 @@ function FavoritePage() {
   useEffect(() => {
     if (data) {
       const favoriteItems = data.filter(item => item.favorite);
-      setCatalog(prevCatalog => [...prevCatalog, ...favoriteItems]);
+      setCatalog(favoriteItems);
     }
   }, [data]);
 
