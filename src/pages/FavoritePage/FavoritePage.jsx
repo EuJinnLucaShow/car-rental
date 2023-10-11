@@ -1,15 +1,14 @@
-import { useGetAdvertsQuery } from 'redux/operations';
-import { WrapperSelect, Wrapper } from './FavoritePage.styled';
 import { useEffect, useState } from 'react';
+import { useGetAdvertsQuery } from 'redux/operations';
+
 import CardItem from 'components/CardItem/CardItem';
 import SelectForm from 'components/Select/Select';
-import Button from '@mui/material/Button';
 import { Loader } from 'components/Loader/Loader';
+import { WrapperSelect, Wrapper } from './FavoritePage.styled';
 
 function FavoritePage() {
-  const [page, setPage] = useState(1);
   const [catalog, setCatalog] = useState([]);
-  const { data, error, isLoading, isFetching } = useGetAdvertsQuery();
+  const { data, error, isLoading } = useGetAdvertsQuery();
 
   useEffect(() => {
     if (data) {
@@ -26,10 +25,6 @@ function FavoritePage() {
   });
   const [filteredAdverts, setFilteredAdverts] = useState(null);
   const [isFiltering, setIsFiltering] = useState(false);
-
-  const loadMore = () => {
-    setPage(page + 1);
-  };
 
   useEffect(() => {
     if (isFiltering) {
@@ -108,11 +103,6 @@ function FavoritePage() {
         ) : catalog.length > 0 ? (
           catalog.map((car, index) => <CardItem key={index} data={car} />)
         ) : null}
-        {!isFiltering && data && data.length >= 8 && (
-          <Button variant="text" onClick={loadMore} disabled={isFetching}>
-            Load more
-          </Button>
-        )}
       </Wrapper>
     </>
   );
