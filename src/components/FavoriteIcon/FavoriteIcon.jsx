@@ -21,9 +21,7 @@ export default function FavoriteIcon({ data }) {
 
   const handleToggleFavorite = async ({ id, favorite }) => {
     try {
-      // Toggle the favorite status
       const newFavoriteStatus = !favorite;
-      // Call the mutation to update the favorite status
       await updateFavoriteAdvertById({ id, favorite: newFavoriteStatus });
       setFavChecked(newFavoriteStatus);
     } catch (error) {
@@ -36,7 +34,7 @@ export default function FavoriteIcon({ data }) {
       <Checkbox
         icon={<StylesFavoriteBorder />}
         checkedIcon={<StylesFavorite />}
-        checked={favChecked} // Assuming 'favorite' is a boolean property in the 'data' object
+        checked={favChecked}
         onChange={() => handleToggleFavorite({ id, favorite })}
       />
     </div>
