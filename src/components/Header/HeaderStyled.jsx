@@ -33,7 +33,7 @@ export const NavMenu = styled(NavLink)`
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px;
 
   &.active {
     color: #fff;
