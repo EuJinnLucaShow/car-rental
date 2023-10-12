@@ -5,6 +5,11 @@ export const Container = styled.div`
   align-items: flex-end;
   margin-top: 50px;
   gap: 8px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const SelectContainer = styled.div`
