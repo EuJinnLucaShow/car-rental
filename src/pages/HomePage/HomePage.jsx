@@ -1,12 +1,10 @@
-import HeroImage from '../../images/explore-our-vehicles.png';
+import { ImageHero } from './HomePage.styled';
 
 function HomePage() {
   return (
-    <>
-      <div>
-        <img src={HeroImage} alt="Cars" width={'100%'} />
-      </div>
-    </>
+    <div>
+      <ImageHero />
+    </div>
   );
 }
 
