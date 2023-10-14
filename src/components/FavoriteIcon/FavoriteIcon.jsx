@@ -1,21 +1,13 @@
 import * as React from 'react';
 import Checkbox from '@mui/material/Checkbox';
-import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
-import Favorite from '@mui/icons-material/Favorite';
-import { styled } from '@mui/material/styles';
+
 import { useUpdateFavoriteAdvertByIdMutation } from 'redux/operations';
+import { StylesFavoriteBorder, StylesFavorite } from './FavoriteIcon.styled';
+import { toast } from 'react-toastify';
 
 export default function FavoriteIcon({ data }) {
   const { id, favorite } = data;
-  const [favChecked, setFavChecked] = React.useState(favorite);
-
-  const StylesFavorite = styled(Favorite)({
-    fill: '#3470FF',
-  });
-
-  const StylesFavoriteBorder = styled(FavoriteBorder)({
-    fill: '#FFFFFFCC',
-  });
+  const [checked, setChecked] = React.useState(favorite);
 
   const [updateFavoriteAdvertById] = useUpdateFavoriteAdvertByIdMutation();
 
@@ -23,9 +15,42 @@ export default function FavoriteIcon({ data }) {
     try {
       const newFavoriteStatus = !favorite;
       await updateFavoriteAdvertById({ id, favorite: newFavoriteStatus });
-      setFavChecked(newFavoriteStatus);
+      setChecked(newFavoriteStatus);
+
+      if (newFavoriteStatus) {
+        toast.success('Added to favorite', {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'light',
+        });
+      } else {
+        toast.warn('Removed from favorite', {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'light',
+        });
+      }
     } catch (error) {
-      console.log('Sorry something wrong');
+      toast.error('Sorry, something went wrong', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
     }
   };
 
@@ -34,7 +59,7 @@ export default function FavoriteIcon({ data }) {
       <Checkbox
         icon={<StylesFavoriteBorder />}
         checkedIcon={<StylesFavorite />}
-        checked={favChecked}
+        checked={checked}
         onChange={() => handleToggleFavorite({ id, favorite })}
       />
     </div>
