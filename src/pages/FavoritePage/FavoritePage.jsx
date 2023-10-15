@@ -102,7 +102,9 @@ function FavoritePage() {
           <Loader />
         ) : catalog.length > 0 ? (
           catalog.map((car, index) => <CardItem key={index} data={car} />)
-        ) : null}
+        ) : (
+          <div>Favorite is empty.</div>
+        )}
       </Wrapper>
     </>
   );

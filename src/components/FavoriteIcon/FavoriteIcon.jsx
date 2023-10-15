@@ -29,7 +29,7 @@ export default function FavoriteIcon({ data }) {
           theme: 'light',
         });
       } else {
-        toast.warn('Removed from favorite', {
+        toast.warn('Removed from favorites', {
           position: 'top-right',
           autoClose: 5000,
           hideProgressBar: false,
