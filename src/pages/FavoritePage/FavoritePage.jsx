@@ -1,21 +1,20 @@
 import { useEffect, useState } from 'react';
-import { useGetAdvertsQuery } from 'redux/operations';
 
 import CardItem from 'components/CardItem/CardItem';
 import SelectForm from 'components/Select/Select';
-import { Loader } from 'components/Loader/Loader';
 import { WrapperSelect, Wrapper } from './FavoritePage.styled';
+import { useSelector } from 'react-redux';
+import { selectFavorites } from 'redux/selectors';
 
 function FavoritePage() {
   const [catalog, setCatalog] = useState([]);
-  const { data, error, isLoading } = useGetAdvertsQuery();
+  const arrs = useSelector(selectFavorites);
 
   useEffect(() => {
-    if (data) {
-      const favoriteItems = data.filter(item => item.favorite);
-      setCatalog(favoriteItems);
+    if (arrs) {
+      setCatalog(arrs.favorites);
     }
-  }, [data]);
+  }, [arrs]);
 
   const [filters, setFilters] = useState({
     make: '',
@@ -96,10 +95,6 @@ function FavoritePage() {
           ) : (
             <div>No results found for the selected criteria.</div>
           )
-        ) : error ? (
-          <>Oops, there was an error...</>
-        ) : isLoading ? (
-          <Loader />
         ) : catalog.length > 0 ? (
           catalog.map((car, index) => <CardItem key={index} data={car} />)
         ) : (

@@ -18,14 +18,6 @@ export const api = createApi({
       query: id => `/advert/${id}`,
       providesTags: ['Advert'],
     }),
-    updateFavoriteAdvertById: builder.mutation({
-      query: fields => ({
-        url: `/advert/${fields.id}`,
-        method: 'PUT',
-        body: fields,
-      }),
-      invalidatesTags: ['Advert'],
-    }),
   }),
 });
 
@@ -33,5 +25,4 @@ export const {
   useGetCarsByPageQuery,
   useGetAdvertsQuery,
   useGetAdvertByIdQuery,
-  useUpdateFavoriteAdvertByIdMutation,
 } = api;

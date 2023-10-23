@@ -11,12 +11,12 @@ import {
   REGISTER,
 } from 'redux-persist';
 
-import { filtersReducer } from './filtersSlice';
+import favoritesReducer from './favoriteSlice';
 import { api } from './operations';
 
 const reducers = combineReducers({
   [api.reducerPath]: api.reducer,
-  filters: filtersReducer,
+  favorites: favoritesReducer,
 });
 
 const persistConfig = {
