@@ -89,7 +89,6 @@ export const UnitRight = styled.span`
   display: block;
   left: 180px;
   top: 15px;
-  z-index: 9;
   font-family: 'Manrope';
   color: rgba(18, 20, 23, 1);
   font-size: 18px;
