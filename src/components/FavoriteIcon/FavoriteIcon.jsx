@@ -20,10 +20,6 @@ export default function FavoriteIcon({ data }) {
     }
   };
 
-  useEffect(() => {
-    console.log(arrs);
-  }, [arrs]);
-
   return (
     <div style={{ position: 'absolute', top: '0', right: '0' }}>
       <Checkbox
