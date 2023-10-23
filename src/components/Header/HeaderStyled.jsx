@@ -1,5 +1,8 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
+import HomeIcon from '@mui/icons-material/Home';
+import DriveEtaIcon from '@mui/icons-material/DriveEta';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 export const HeaderWrapper = styled.header`
   padding: 12px;
@@ -15,8 +18,7 @@ export const Container = styled.div`
   max-width: 91.25em;
   margin: 0 auto;
   padding: 0 0.9375rem;
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
+  @media screen and (max-width: 425px) {
     gap: 8px;
   }
 `;
@@ -35,6 +37,10 @@ export const NavMenu = styled(NavLink)`
   font-weight: 600;
   line-height: 20px;
 
+  @media screen and (max-width: 425px) {
+    padding: 14px 32px;
+  }
+
   &.active {
     color: #fff;
     background: #3470ff;
@@ -43,5 +49,29 @@ export const NavMenu = styled(NavLink)`
   &:hover {
     color: #fff;
     background: #3470ff;
+  }
+`;
+
+export const HomeIcons = styled(HomeIcon)`
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
+`;
+
+export const Drives = styled(DriveEtaIcon)`
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
+`;
+
+export const Favorite = styled(FavoriteBorderIcon)`
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
+`;
+
+export const Span = styled.span`
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 `;
