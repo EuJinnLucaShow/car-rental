@@ -7,9 +7,9 @@ import { selectFavorites } from 'redux/selectors';
 export default function FavoriteIcon({ data }) {
   const dispatch = useDispatch();
 
-  const arrs = useSelector(selectFavorites);
+  const cars = useSelector(selectFavorites);
 
-  const isChecked = arrs.favorites.some(({ id }) => id === data.id);
+  const isChecked = cars.favorites.some(({ id }) => id === data.id);
 
   const handleToggleFavorite = () => {
     if (isChecked) {

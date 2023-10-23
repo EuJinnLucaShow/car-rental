@@ -8,13 +8,13 @@ import { selectFavorites } from 'redux/selectors';
 
 function FavoritePage() {
   const [catalog, setCatalog] = useState([]);
-  const arrs = useSelector(selectFavorites);
+  const cars = useSelector(selectFavorites);
 
   useEffect(() => {
-    if (arrs) {
-      setCatalog(arrs.favorites);
+    if (cars) {
+      setCatalog(cars.favorites);
     }
-  }, [arrs]);
+  }, [cars]);
 
   const [filters, setFilters] = useState({
     make: '',

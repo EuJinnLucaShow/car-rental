@@ -42,7 +42,7 @@ export const Title = styled.h3`
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
 `;
 
 export const Price = styled.p`
@@ -51,7 +51,7 @@ export const Price = styled.p`
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
 `;
 
 export const Description = styled.ul`
@@ -78,6 +78,6 @@ export const Description = styled.ul`
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 18px; /* 150% */
+    line-height: 18px;
   }
 `;
