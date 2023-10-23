@@ -67,10 +67,10 @@ function CatalogPage() {
 
         setFilteredAdverts(filteredAdverts);
       } else {
-        setFilteredAdverts([]);
+        setFilteredAdverts(catalog);
       }
     }
-  }, [filters, allAdverts, isFiltering]);
+  }, [filters, allAdverts, isFiltering, catalog]);
 
   const makes = allAdverts
     ? [...new Set(allAdverts.map(advert => advert.make))]
@@ -119,7 +119,7 @@ function CatalogPage() {
         ) : catalog.length > 0 ? (
           catalog.map((car, index) => <CardItem key={index} data={car} />)
         ) : null}
-        {!isFiltering && data && data.length >= 8 && (
+        {data?.length >= 8 && (
           <Button variant="text" onClick={loadMore} disabled={isFetching}>
             Load more
           </Button>

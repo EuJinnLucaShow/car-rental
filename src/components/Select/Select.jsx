@@ -57,7 +57,6 @@ export default function SelectForm({ makes, prices, onFilterChange }) {
       parseInt(maxValue.replace(/,/g, ''), 10)
     ) {
       toast.error('Minimum mileage cannot be greater than maximum mileage');
-      return;
     }
 
     const newFilters = {
@@ -83,6 +82,7 @@ export default function SelectForm({ makes, prices, onFilterChange }) {
           value={selectedMake}
           onChange={selectedOption => setSelectedMake(selectedOption)}
           options={makeOptions}
+          isClearable={true}
           styles={{
             control: styles => ({
               ...styles,
