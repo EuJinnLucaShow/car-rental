@@ -24,3 +24,18 @@ export const WrapperButton = styled.div`
   justify-content: center;
   margin-bottom: 50px;
 `;
+
+export const Button = styled.button`
+  border: none;
+  background-color: transparent;
+`;
+
+export const TextButtun = styled.span`
+  color: #3470ff;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  text-decoration-line: underline;
+`;

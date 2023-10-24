@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Button from '@mui/material/Button';
 
 import CardItem from 'components/CardItem/CardItem';
 import SelectForm from 'components/Select/Select';
@@ -9,12 +8,18 @@ import {
 } from '../../redux/operations';
 import { Loader } from 'components/Loader/Loader';
 
-import { Wrapper, WrapperSelect, WrapperButton } from './CatalogPage.styled';
+import {
+  Wrapper,
+  WrapperSelect,
+  WrapperButton,
+  Button,
+  TextButtun,
+} from './CatalogPage.styled';
 
 function CatalogPage() {
   const [page, setPage] = useState(1);
   const [catalog, setCatalog] = useState([]);
-  const { data, error, isLoading, isFetching } = useGetCarsByPageQuery(page);
+  const { data, error, isLoading } = useGetCarsByPageQuery(page);
   const { data: allAdverts } = useGetAdvertsQuery();
 
   const [filters, setFilters] = useState({
@@ -122,8 +127,8 @@ function CatalogPage() {
       </Wrapper>
       <WrapperButton>
         {data?.length >= 8 && (
-          <Button variant="text" onClick={loadMore} disabled={isFetching}>
-            Load more
+          <Button type="button" onClick={loadMore}>
+            <TextButtun>Load more</TextButtun>
           </Button>
         )}
       </WrapperButton>
