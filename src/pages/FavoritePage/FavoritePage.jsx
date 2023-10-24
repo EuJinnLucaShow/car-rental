@@ -2,7 +2,12 @@ import { useEffect, useState } from 'react';
 
 import CardItem from 'components/CardItem/CardItem';
 import SelectForm from 'components/Select/Select';
-import { WrapperSelect, Wrapper } from './FavoritePage.styled';
+import {
+  WrapperSelect,
+  Wrapper,
+  WrapperLink,
+  Button,
+} from './FavoritePage.styled';
 import { useSelector } from 'react-redux';
 import { selectFavorites } from 'redux/selectors';
 
@@ -98,7 +103,10 @@ function FavoritePage() {
         ) : catalog.length > 0 ? (
           catalog.map((car, index) => <CardItem key={index} data={car} />)
         ) : (
-          <div>Favorite is empty.</div>
+          <WrapperLink>
+            <span>Favorite is empty.</span>
+            <Button to={'/catalog'}>Go to catalog</Button>
+          </WrapperLink>
         )}
       </Wrapper>
     </>
