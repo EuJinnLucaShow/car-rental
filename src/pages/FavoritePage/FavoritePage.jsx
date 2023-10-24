@@ -56,7 +56,7 @@ function FavoritePage() {
 
         setFilteredAdverts(filteredAdverts);
       } else {
-        setFilteredAdverts([]);
+        setFilteredAdverts(catalog);
       }
     }
   }, [filters, catalog, isFiltering]);
