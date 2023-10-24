@@ -9,7 +9,7 @@ import {
 } from '../../redux/operations';
 import { Loader } from 'components/Loader/Loader';
 
-import { Wrapper, WrapperSelect } from './CatalogPage.styled';
+import { Wrapper, WrapperSelect, WrapperButton } from './CatalogPage.styled';
 
 function CatalogPage() {
   const [page, setPage] = useState(1);
@@ -119,12 +119,14 @@ function CatalogPage() {
         ) : catalog.length > 0 ? (
           catalog.map((car, index) => <CardItem key={index} data={car} />)
         ) : null}
+      </Wrapper>
+      <WrapperButton>
         {data?.length >= 8 && (
           <Button variant="text" onClick={loadMore} disabled={isFetching}>
             Load more
           </Button>
         )}
-      </Wrapper>
+      </WrapperButton>
     </>
   );
 }
