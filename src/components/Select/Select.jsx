@@ -31,8 +31,13 @@ export default function SelectForm({ makes, prices, onFilterChange }) {
   }
 
   const handlePriceStepChange = selectedOption => {
-    setSelectedPriceStep(selectedOption.value);
-    setSelectedPriceLabel(selectedOption.label);
+    if (selectedOption === null) {
+      setSelectedPriceStep(null);
+      setSelectedPriceLabel('');
+    } else {
+      setSelectedPriceStep(selectedOption.value);
+      setSelectedPriceLabel(selectedOption.label);
+    }
   };
 
   const filteredPrices = prices.filter(price => price <= selectedPriceStep);
@@ -142,6 +147,7 @@ export default function SelectForm({ makes, prices, onFilterChange }) {
           }
           onChange={handlePriceStepChange}
           options={priceRangeOptions}
+          isClearable={true}
           styles={{
             control: styles => ({
               ...styles,
