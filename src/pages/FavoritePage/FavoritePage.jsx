@@ -18,7 +18,7 @@ function FavoritePage() {
 
   useEffect(() => {
     if (cars) {
-      setCatalog(cars.favorites);
+      setCatalog(cars);
     }
   }, [cars]);
 

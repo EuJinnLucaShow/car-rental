@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Buttons from 'components/Buttons/Buttons';
 import BasicModal from 'components/Modal/Modal';
 import FavoriteIcon from '../FavoriteIcon/FavoriteIcon';
@@ -10,7 +11,6 @@ import {
   Price,
   Description,
 } from './CardItem.styled';
-import { useState } from 'react';
 
 export default function CardItem({ data }) {
   const [open, setOpen] = useState(false);

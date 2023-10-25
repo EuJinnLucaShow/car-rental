@@ -9,7 +9,7 @@ export default function FavoriteIcon({ data }) {
 
   const cars = useSelector(selectFavorites);
 
-  const isChecked = cars.favorites.some(({ id }) => id === data.id);
+  const isChecked = cars.some(({ id }) => id === data.id);
 
   const handleToggleFavorite = () => {
     if (isChecked) {

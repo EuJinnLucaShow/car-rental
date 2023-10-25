@@ -14,15 +14,7 @@ export const api = createApi({
       query: () => '/advert',
       providesTags: ['Advert'],
     }),
-    getAdvertById: builder.query({
-      query: id => `/advert/${id}`,
-      providesTags: ['Advert'],
-    }),
   }),
 });
 
-export const {
-  useGetCarsByPageQuery,
-  useGetAdvertsQuery,
-  useGetAdvertByIdQuery,
-} = api;
+export const { useGetCarsByPageQuery, useGetAdvertsQuery } = api;

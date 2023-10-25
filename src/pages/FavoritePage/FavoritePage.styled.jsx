@@ -15,6 +15,11 @@ export const Wrapper = styled.div`
   gap: 50px 29px;
   margin-top: 50px;
   margin-bottom: 50px;
+
+  @media screen and (min-width: 425px) {
+    padding-left: 128px;
+    padding-right: 128px;
+  }
 `;
 
 export const WrapperLink = styled.div`
