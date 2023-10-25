@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { selectFavorites } from 'redux/selectors';
 
 import CardItem from 'components/CardItem/CardItem';
 import SelectForm from 'components/Select/Select';
@@ -7,9 +9,8 @@ import {
   Wrapper,
   WrapperLink,
   Button,
+  ImgEmptyFav,
 } from './FavoritePage.styled';
-import { useSelector } from 'react-redux';
-import { selectFavorites } from 'redux/selectors';
 
 function FavoritePage() {
   const [catalog, setCatalog] = useState([]);
@@ -105,6 +106,7 @@ function FavoritePage() {
         ) : (
           <WrapperLink>
             <span>Favorite is empty.</span>
+            <ImgEmptyFav alt="favorite-is-empty" />
             <Button to={'/catalog'}>Go to catalog</Button>
           </WrapperLink>
         )}

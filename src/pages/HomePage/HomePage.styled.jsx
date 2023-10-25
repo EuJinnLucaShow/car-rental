@@ -3,6 +3,13 @@ import HeroImage from '../../images/explore-our-vehicles.webp';
 import HeroMobile from '../../images/car_rental.jpeg';
 import { Link } from 'react-router-dom';
 
+export const WrapperHero = styled.div`
+position: relative;
+        display: flex;
+        justify-content: center;
+        border-radius: 14px;
+`;
+
 export const ImageHero = styled.img`
   border-radius: 14px;
 

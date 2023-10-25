@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
+import EmptyFav from '../../images/favorites__empty_.png';
 
 export const WrapperSelect = styled.div`
   display: flex;
@@ -29,7 +30,7 @@ export const Button = styled(Link)`
   border-radius: 12px;
   background: #3470ff;
   color: #fff;
-  margin-top: 20px;
+  margin-top: 5px;
   font-family: 'Manrope';
   font-size: 14px;
   font-style: normal;
@@ -41,4 +42,11 @@ export const Button = styled(Link)`
   &:hover {
     background-color: #0b44cd;
   }
+`;
+
+export const ImgEmptyFav = styled.img`
+  margin-top: 5px;
+  border-radius: 14px;
+  width: 20vw;
+  content: url(${EmptyFav});
 `;
