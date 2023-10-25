@@ -15,7 +15,7 @@ function HomePage() {
         Ride!
       </Title>
       <Button to={'/catalog'}>Go to catalog</Button>
-      <ImageHero />
+      <ImageHero alt="rent-a-car-for-your-holiday-road-trip" />
     </div>
   );
 }
