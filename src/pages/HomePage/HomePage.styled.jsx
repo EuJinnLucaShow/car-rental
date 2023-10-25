@@ -4,6 +4,8 @@ import HeroMobile from '../../images/car_rental.jpeg';
 import { Link } from 'react-router-dom';
 
 export const ImageHero = styled.img`
+  border-radius: 14px;
+
   @media screen and (max-width: 768px) {
     width: 100vw;
     content: url(${HeroMobile});
@@ -11,7 +13,6 @@ export const ImageHero = styled.img`
 
   @media screen and (min-width: 769px) {
     width: 75vw;
-    border-radius: 14px;
     content: url(${HeroImage});
   }
 `;
