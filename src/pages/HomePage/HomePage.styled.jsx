@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import HeroImage from '../../images/explore-our-vehicles.webp';
-import HeroMobile from '../../images/car_rental.jpg';
+import HeroMobile from '../../images/car_rental.jpeg';
 import { Link } from 'react-router-dom';
 
 export const ImageHero = styled.img`
@@ -18,15 +18,25 @@ export const ImageHero = styled.img`
 
 export const Title = styled.h1`
   position: absolute;
-  width: 700px;
   font-family: 'Manrope';
   text-align: center;
-  margin-top: 60px;
+
   color: #0b44cd;
-  font-size: 48px;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   text-shadow: rgba(224, 255, 255, 0.5) 5px 5px 5px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 25px;
+    width: 300px;
+    font-size: 22px;
+  }
+
+  @media screen and (min-width: 769px) {
+    margin-top: 60px;
+    width: 700px;
+    font-size: 48px;
+  }
 `;
 
 export const Button = styled(Link)`
@@ -49,5 +59,9 @@ export const Button = styled(Link)`
     0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   &:hover {
     background-color: #0b44cd;
+  }
+
+  @media screen and (max-width: 768px) {
+    top: 100px;
   }
 `;
