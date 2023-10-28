@@ -8,7 +8,7 @@ export const WrapperSelect = styled.div`
   justify-content: center;
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
