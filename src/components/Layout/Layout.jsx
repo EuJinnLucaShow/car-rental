@@ -7,7 +7,7 @@ import { Loader } from '../Loader/Loader';
 
 export default function Layout() {
   return (
-    <div>
+    <>
       <Header />
       <Suspense fallback={<Loader />}>
         <main>
@@ -15,6 +15,6 @@ export default function Layout() {
         </main>
       </Suspense>
       <Footer />
-    </div>
+    </>
   );
 }
