@@ -73,6 +73,7 @@ function CatalogPage() {
         setFilteredAdverts(filteredAdverts);
       } else {
         setFilteredAdverts(catalog);
+        setIsFiltering(false);
       }
     }
   }, [filters, allAdverts, isFiltering, catalog]);
@@ -126,7 +127,7 @@ function CatalogPage() {
         ) : null}
       </Wrapper>
       <WrapperButton>
-        {data?.length >= 8 && (
+        {!isFiltering && data?.length >= 8 && (
           <Button type="button" onClick={loadMore}>
             <TextButtun>Load more</TextButtun>
           </Button>
