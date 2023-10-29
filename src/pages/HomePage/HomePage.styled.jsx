@@ -1,50 +1,75 @@
 import styled from '@emotion/styled';
-import HeroCar from '../../images/hero-car.png';
-// import HeroMobile from '../../images/car_rental.jpeg';
 import { Link } from 'react-router-dom';
+import HeroCar from '../../images/hero-car.png';
+import '../../custom-font.css';
 
 export const WrapperHero = styled.div`
   background-color: #f7f7fb;
-
   height: 709px;
   flex-shrink: 0;
-  position: relative;
+  display: flex;
 `;
 
 export const ImageHero = styled.img`
-  width: 50%;
+  width: 917px;
   flex-shrink: 0;
   content: url(${HeroCar});
-  position: absolute;
-  right: 0;
   margin-top: 80px;
 `;
 
-export const Title = styled.h1`
-  position: absolute;
-  font-family: 'Manrope';
-  text-align: center;
+export const WrapperTitle = styled.div`
+  width: 529px;
+  margin-left: 140px;
+  margin-top: 142px;
+  position: relative;
+`;
 
-  color: #0b44cd;
+export const Title = styled.article`
+  color: #1d1e21;
+
+  font-family: 'Geomanist', sans-serif;
+  font-size: 60px;
   font-style: normal;
-  font-weight: 700;
-  text-shadow: rgba(224, 255, 255, 0.5) 5px 5px 5px;
+  font-weight: 600;
+  line-height: 110%; /* 70.4px */
+  letter-spacing: 0.8px;
+`;
 
-  @media screen and (max-width: 768px) {
-    margin-top: 25px;
-    width: 300px;
-    font-size: 22px;
-  }
+export const Span = styled.span`
+  color: #3083ff;
+  font-family: 'Geomanist', sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: 0.8px;
+`;
 
-  @media screen and (min-width: 769px) {
-    margin-top: 60px;
-    width: 700px;
-    font-size: 48px;
-  }
+export const ImgRectangle = styled.img`
+  position: absolute;
+  top: 22%;
+  right: 1%;
+`;
+
+export const Text = styled.article`
+  color: #929395;
+
+  font-family: 'Geomanist';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 144%; /* 25.92px */
+  letter-spacing: 0.18px;
+  margin-top: 16px;
+`;
+
+export const ImgStorePlay = styled.img`
+  width: 130px;
+  height: 44px;
+  cursor: pointer;
 `;
 
 export const Button = styled(Link)`
-  position: absolute;
   top: 230px;
   padding: 14px 34px;
   justify-content: center;
