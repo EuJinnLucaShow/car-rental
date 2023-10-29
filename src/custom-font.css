@@ -1,4 +1,31 @@
 @font-face {
-  font-family: 'Geomanist';
-  src: url('./fonts/geomanist-regular.ttf') format('truetype');
+  font-family: 'GeomanistRegular';
+  src: local('GeomanistRegular'),
+    url('./fonts/Geomanist-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeomanistMedium';
+  src: local('GeomanistMedium'),
+    url('./fonts/Geomanist-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeomanistBold';
+  src: local('GeomanistBold'),
+    url('./fonts/Geomanist-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeomanistBook';
+  src: local('GeomanistBook'),
+    url('./fonts/Geomanist-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }

@@ -18,8 +18,8 @@ function HomePage() {
       <WrapperTitle>
         <Title>
           Find, book, and rental car in <Span>Easy</Span> steps.
-          <ImgRectangle src={Rectangle} alt="Rectangle" />
         </Title>
+        <ImgRectangle src={Rectangle} alt="Rectangle" />
         <Text>
           Get a car wherever and whenever you need it with your iOS or Android
           device.

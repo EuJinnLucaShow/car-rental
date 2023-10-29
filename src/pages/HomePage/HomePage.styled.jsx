@@ -8,10 +8,11 @@ export const WrapperHero = styled.div`
   height: 709px;
   flex-shrink: 0;
   display: flex;
+  justify-content: space-between;
 `;
 
 export const ImageHero = styled.img`
-  width: 917px;
+  width: 800px;
   flex-shrink: 0;
   content: url(${HeroCar});
   margin-top: 80px;
@@ -27,34 +28,30 @@ export const WrapperTitle = styled.div`
 export const Title = styled.article`
   color: #1d1e21;
 
-  font-family: 'Geomanist', sans-serif;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 600;
+  font-family: 'GeomanistMedium';
+  font-size: 64px;
   line-height: 110%; /* 70.4px */
   letter-spacing: 0.8px;
 `;
 
 export const Span = styled.span`
   color: #3083ff;
-  font-family: 'Geomanist', sans-serif;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 600;
+  font-family: 'GeomanistMedium';
+  font-size: 64px;
   line-height: 110%;
   letter-spacing: 0.8px;
 `;
 
 export const ImgRectangle = styled.img`
   position: absolute;
-  top: 22%;
-  right: 1%;
+  top: 133px;
+  right: 32px;
 `;
 
 export const Text = styled.article`
   color: #929395;
 
-  font-family: 'Geomanist';
+  font-family: 'GeomanistRegular';
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
