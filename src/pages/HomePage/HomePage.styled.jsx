@@ -1,27 +1,23 @@
 import styled from '@emotion/styled';
-import HeroImage from '../../images/explore-our-vehicles.webp';
-import HeroMobile from '../../images/car_rental.jpeg';
+import HeroCar from '../../images/hero-car.png';
+// import HeroMobile from '../../images/car_rental.jpeg';
 import { Link } from 'react-router-dom';
 
 export const WrapperHero = styled.div`
-position: relative;
-        display: flex;
-        justify-content: center;
-        border-radius: 14px;
+  background-color: #f7f7fb;
+
+  height: 709px;
+  flex-shrink: 0;
+  position: relative;
 `;
 
 export const ImageHero = styled.img`
-  border-radius: 14px;
-
-  @media screen and (max-width: 768px) {
-    width: 100vw;
-    content: url(${HeroMobile});
-  }
-
-  @media screen and (min-width: 769px) {
-    width: 75vw;
-    content: url(${HeroImage});
-  }
+  width: 50%;
+  flex-shrink: 0;
+  content: url(${HeroCar});
+  position: absolute;
+  right: 0;
+  margin-top: 80px;
 `;
 
 export const Title = styled.h1`
