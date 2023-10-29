@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'GeomanistRegular';
   src: local('GeomanistRegular'),
-    url('./fonts/Geomanist-Regular.ttf') format('truetype');
+    url('./fonts/GeomanistRegular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
