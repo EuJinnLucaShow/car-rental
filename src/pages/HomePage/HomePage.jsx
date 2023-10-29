@@ -4,11 +4,10 @@ import {
   Title,
   Span,
   ImageHero,
-  ImgRectangle,
   Text,
   ImgStorePlay,
 } from './HomePage.styled';
-import Rectangle from '../../images/rectangle.svg';
+
 import AppStore from '../../images/app-store.png';
 import GooglePlay from '../../images/google-play.png';
 
@@ -19,7 +18,6 @@ function HomePage() {
         <Title>
           Find, book, and rental car in <Span>Easy</Span> steps.
         </Title>
-        <ImgRectangle src={Rectangle} alt="Rectangle" />
         <Text>
           Get a car wherever and whenever you need it with your iOS or Android
           device.

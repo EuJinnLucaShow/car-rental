@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import HeroCar from '../../images/hero-car.png';
 import '../../custom-font.css';
+import Rectangle from '../../images/rectangle.svg';
 
 export const WrapperHero = styled.div`
   background-color: #f7f7fb;
@@ -12,7 +13,7 @@ export const WrapperHero = styled.div`
 `;
 
 export const ImageHero = styled.img`
-  width: 800px;
+  width: 825px;
   flex-shrink: 0;
   content: url(${HeroCar});
   margin-top: 80px;
@@ -27,7 +28,6 @@ export const WrapperTitle = styled.div`
 
 export const Title = styled.article`
   color: #1d1e21;
-
   font-family: 'GeomanistMedium';
   font-size: 64px;
   line-height: 110%; /* 70.4px */
@@ -40,12 +40,13 @@ export const Span = styled.span`
   font-size: 64px;
   line-height: 110%;
   letter-spacing: 0.8px;
-`;
-
-export const ImgRectangle = styled.img`
-  position: absolute;
-  top: 133px;
-  right: 32px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: url(${Rectangle});
+    top: 23px;
+    right: 0;
+  }
 `;
 
 export const Text = styled.article`
