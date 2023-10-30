@@ -121,3 +121,42 @@ export const SpanHowItWork = styled.span`
   line-height: 124%; /* 39.68px */
   letter-spacing: 0.4px;
 `;
+
+export const WrapperStep = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  width: 1160px;
+`;
+
+export const WrapperImgLocation = styled.div`
+  width: 129px;
+  height: 129px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  background: #fff;
+
+  box-shadow: 0px 12px 32px 0px rgba(169, 169, 173, 0.16);
+`;
+
+export const WrapperImgData = styled.div`
+  width: 129px;
+  height: 129px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  background: radial-gradient(
+    115.89% 115.89% at 49.61% 115.89%,
+    #3083ff 0%,
+    #87b5fb 100%
+  );
+  box-shadow: 0px 16px 32px 0px rgba(48, 131, 255, 0.3);
+`;
+
+export const WrapperImgBook = styled.div`
+  width: 129px;
+  height: 129px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  background: #fff;
+
+  box-shadow: 0px 12px 32px 0px rgba(169, 169, 173, 0.16);
+`;

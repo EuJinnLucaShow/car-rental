@@ -11,6 +11,10 @@ import {
   WrapperHowItWork,
   TitleHowItWork,
   SpanHowItWork,
+  WrapperStep,
+  WrapperImgLocation,
+  WrapperImgData,
+  WrapperImgBook,
 } from './HomePage.styled';
 
 import AppStore from '../../images/app-store.png';
@@ -56,6 +60,11 @@ function HomePage() {
           HOW IT WORK
           <SpanHowItWork>Rent with following 3 working steps</SpanHowItWork>
         </TitleHowItWork>
+        <WrapperStep>
+          <WrapperImgLocation></WrapperImgLocation>
+          <WrapperImgData></WrapperImgData>
+          <WrapperImgBook></WrapperImgBook>
+        </WrapperStep>
       </WrapperHowItWork>
     </>
   );
