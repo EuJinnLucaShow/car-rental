@@ -25,7 +25,7 @@ export const WrapperTitle = styled.div`
   position: relative;
 `;
 
-export const Title = styled.article`
+export const Title = styled.h1`
   color: #1d1e21;
   font-family: 'GeomanistMedium';
   font-size: 64px;
@@ -80,4 +80,44 @@ export const WrapperBrandLogo = styled.div`
 export const ImgBrandLogo = styled.img`
   width: 64px;
   height: 64px;
+`;
+
+export const WrapperHowItWork = styled.div`
+  display: flex;
+  width: 1160px;
+  flex-direction: column;
+  align-items: center;
+  gap: 54px;
+  margin-top: 132px;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+export const TitleHowItWork = styled.h2`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  color: #acaeb4;
+
+  text-align: center;
+  font-family: 'GeomanistMedium';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%; /* 17.6px */
+  letter-spacing: 1.96px;
+`;
+
+export const SpanHowItWork = styled.span`
+  color: #1d1e21;
+
+  text-align: center;
+  font-family: 'GeomanistMedium';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 124%; /* 39.68px */
+  letter-spacing: 0.4px;
 `;

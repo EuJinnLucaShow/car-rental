@@ -8,6 +8,9 @@ import {
   ImgStorePlay,
   WrapperBrandLogo,
   ImgBrandLogo,
+  WrapperHowItWork,
+  TitleHowItWork,
+  SpanHowItWork,
 } from './HomePage.styled';
 
 import AppStore from '../../images/app-store.png';
@@ -22,7 +25,7 @@ import Nissan from '../../images/nissan.png';
 
 function HomePage() {
   return (
-    <div style={{}}>
+    <>
       <WrapperHero>
         <WrapperTitle>
           <Title>
@@ -48,7 +51,13 @@ function HomePage() {
         <ImgBrandLogo src={Ford} alt="Brand Logo Ford" />
         <ImgBrandLogo src={Nissan} alt="Brand Logo Nissan" />
       </WrapperBrandLogo>
-    </div>
+      <WrapperHowItWork>
+        <TitleHowItWork>
+          HOW IT WORK
+          <SpanHowItWork>Rent with following 3 working steps</SpanHowItWork>
+        </TitleHowItWork>
+      </WrapperHowItWork>
+    </>
   );
 }
 
