@@ -129,6 +129,9 @@ export const WrapperStep = styled.div`
 `;
 
 export const WrapperImgLocation = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 129px;
   height: 129px;
   flex-shrink: 0;
@@ -139,6 +142,9 @@ export const WrapperImgLocation = styled.div`
 `;
 
 export const WrapperImgData = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 129px;
   height: 129px;
   flex-shrink: 0;
@@ -152,6 +158,9 @@ export const WrapperImgData = styled.div`
 `;
 
 export const WrapperImgBook = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 129px;
   height: 129px;
   flex-shrink: 0;

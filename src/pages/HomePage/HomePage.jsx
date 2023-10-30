@@ -26,6 +26,9 @@ import Bmw from '../../images/bmw.png';
 import Amg from '../../images/amg.png';
 import Ford from '../../images/ford.png';
 import Nissan from '../../images/nissan.png';
+import Location from '../../images/location.svg';
+import Calendar from '../../images/calendar-tick.svg';
+import Book from '../../images/car.svg';
 
 function HomePage() {
   return (
@@ -61,9 +64,15 @@ function HomePage() {
           <SpanHowItWork>Rent with following 3 working steps</SpanHowItWork>
         </TitleHowItWork>
         <WrapperStep>
-          <WrapperImgLocation></WrapperImgLocation>
-          <WrapperImgData></WrapperImgData>
-          <WrapperImgBook></WrapperImgBook>
+          <WrapperImgLocation>
+            <img src={Location} alt="Location" />
+          </WrapperImgLocation>
+          <WrapperImgData>
+            <img src={Calendar} alt="Calendar" />
+          </WrapperImgData>
+          <WrapperImgBook>
+            <img src={Book} alt="Book" />
+          </WrapperImgBook>
         </WrapperStep>
       </WrapperHowItWork>
     </>
