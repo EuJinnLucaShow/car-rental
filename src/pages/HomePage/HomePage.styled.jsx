@@ -124,7 +124,8 @@ export const SpanHowItWork = styled.span`
 
 export const WrapperStep = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: baseline;
   width: 1160px;
 `;
 
@@ -168,4 +169,47 @@ export const WrapperImgBook = styled.div`
   background: #fff;
 
   box-shadow: 0px 12px 32px 0px rgba(169, 169, 173, 0.16);
+`;
+
+export const WrapperBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const StepTitle = styled.h3`
+  color: #1d1e21;
+
+  text-align: center;
+  font-family: 'GeomanistMedium';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.25px;
+  margin-top: 40px;
+`;
+
+export const StepArticle = styled.article`
+  color: #929395;
+  width: 240px;
+  text-align: center;
+  font-family: 'GeomanistRegular';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 144%; /* 23.04px */
+  letter-spacing: 0.16px;
+  margin-top: 16px;
+`;
+
+export const WrapperWhyChooseUs = styled.div`
+  margin-top: 132px;
+  height: 662px;
+  flex-shrink: 0;
+  background: linear-gradient(
+    270deg,
+    #fafafa 0%,
+    rgba(250, 250, 250, 0) 203.13%
+  );
 `;

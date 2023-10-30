@@ -15,6 +15,10 @@ import {
   WrapperImgLocation,
   WrapperImgData,
   WrapperImgBook,
+  WrapperBlock,
+  StepTitle,
+  StepArticle,
+  WrapperWhyChooseUs,
 } from './HomePage.styled';
 
 import AppStore from '../../images/app-store.png';
@@ -29,6 +33,7 @@ import Nissan from '../../images/nissan.png';
 import Location from '../../images/location.svg';
 import Calendar from '../../images/calendar-tick.svg';
 import Book from '../../images/car.svg';
+import Line from '../../images/Line.svg';
 
 function HomePage() {
   return (
@@ -64,17 +69,38 @@ function HomePage() {
           <SpanHowItWork>Rent with following 3 working steps</SpanHowItWork>
         </TitleHowItWork>
         <WrapperStep>
-          <WrapperImgLocation>
-            <img src={Location} alt="Location" />
-          </WrapperImgLocation>
-          <WrapperImgData>
-            <img src={Calendar} alt="Calendar" />
-          </WrapperImgData>
-          <WrapperImgBook>
-            <img src={Book} alt="Book" />
-          </WrapperImgBook>
+          <WrapperBlock>
+            <WrapperImgLocation>
+              <img src={Location} alt="Location" />
+            </WrapperImgLocation>
+            <StepTitle>Choose location</StepTitle>
+            <StepArticle>
+              Choose your location and find your best car.
+            </StepArticle>
+          </WrapperBlock>
+          <img src={Line} alt="Line" />
+          <WrapperBlock>
+            <WrapperImgData>
+              <img src={Calendar} alt="Calendar" />
+            </WrapperImgData>
+            <StepTitle>Pick-up date</StepTitle>
+            <StepArticle>
+              Select your pick up date and time to book your car.
+            </StepArticle>
+          </WrapperBlock>
+          <img src={Line} alt="Line" />
+          <WrapperBlock>
+            <WrapperImgBook>
+              <img src={Book} alt="Book" />
+            </WrapperImgBook>
+            <StepTitle>Book your car</StepTitle>
+            <StepArticle>
+              Book your car and we will deliver it directly to you.
+            </StepArticle>
+          </WrapperBlock>
         </WrapperStep>
       </WrapperHowItWork>
+      <WrapperWhyChooseUs></WrapperWhyChooseUs>
     </>
   );
 }
