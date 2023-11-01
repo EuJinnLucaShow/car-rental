@@ -11,16 +11,18 @@ import {
   Price,
   Description,
 } from './CardItem.styled';
+import CarLoading from '../../images/loader.gif';
 
 export default function CardItem({ data }) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
   return (
     <Wrapper>
       <WrapperImage>
         <FavoriteIcon data={data} />
-        <Image src={data.img} alt="Car" />
+        <Image src={data.img ? data.img : CarLoading} alt="Car" />
       </WrapperImage>
       <WrapperTitle>
         <Title>
