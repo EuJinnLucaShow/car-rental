@@ -5,13 +5,12 @@ import FavoriteIcon from '../FavoriteIcon/FavoriteIcon';
 import {
   Wrapper,
   WrapperImage,
-  Image,
   WrapperTitle,
   Title,
   Price,
   Description,
 } from './CardItem.styled';
-import CarLoading from '../../images/loader.gif';
+import CarImg from 'components/CarImg/CarImg';
 
 export default function CardItem({ data }) {
   const [open, setOpen] = useState(false);
@@ -22,7 +21,7 @@ export default function CardItem({ data }) {
     <Wrapper>
       <WrapperImage>
         <FavoriteIcon data={data} />
-        <Image src={data.img ? data.img : CarLoading} alt="Car" />
+        <CarImg data={data} />
       </WrapperImage>
       <WrapperTitle>
         <Title>
