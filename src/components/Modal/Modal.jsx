@@ -6,8 +6,7 @@ import Button from 'components/Buttons/Buttons';
 import {
   Wrapper,
   CloseButton,
-  Wrap,
-  Image,
+  Wrap,  
   TextWrap,
   Title,
   Span,
@@ -19,6 +18,7 @@ import {
   ConditionList,
   ConditionSpan,
 } from './Modal.styled';
+import CarImg from 'components/CarImg/CarImg';
 
 const style = {
   position: 'absolute',
@@ -58,7 +58,8 @@ export default function BasicModal({ open, onClose, data }) {
             <CloseButton onClick={onClose}>
               <GrClose style={{ width: '18px', height: '18px' }} />
             </CloseButton>
-            <Image src={data.img} alt={data.make} width="461" height="248" />
+            <CarImg data={data} width="461" height="248" />
+            {/* <Image src={data.img} alt={data.make} width="461" height="248" /> */}
             <Wrap>
               <TextWrap>
                 <Title>
