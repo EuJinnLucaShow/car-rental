@@ -6,7 +6,7 @@ import Button from 'components/Buttons/Buttons';
 import {
   Wrapper,
   CloseButton,
-  Wrap,  
+  Wrap,
   TextWrap,
   Title,
   Span,
@@ -59,7 +59,6 @@ export default function BasicModal({ open, onClose, data }) {
               <GrClose style={{ width: '18px', height: '18px' }} />
             </CloseButton>
             <CarImg data={data} width="461" height="248" />
-            {/* <Image src={data.img} alt={data.make} width="461" height="248" /> */}
             <Wrap>
               <TextWrap>
                 <Title>
