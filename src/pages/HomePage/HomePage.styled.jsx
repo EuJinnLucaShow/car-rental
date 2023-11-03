@@ -213,3 +213,11 @@ export const WrapperWhyChooseUs = styled.div`
     rgba(250, 250, 250, 0) 203.13%
   );
 `;
+
+export const ImgWhyChooseUs = styled.div`
+  margin-left: 140px;
+`;
+
+export const ContentWhyChooseUs = styled.div`
+  /* margin-left: 140px; */
+`;

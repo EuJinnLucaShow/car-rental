@@ -19,6 +19,8 @@ import {
   StepTitle,
   StepArticle,
   WrapperWhyChooseUs,
+  ContentWhyChooseUs,
+  ImgWhyChooseUs,
 } from './HomePage.styled';
 
 import AppStore from '../../images/app-store.png';
@@ -34,6 +36,7 @@ import Location from '../../images/location.svg';
 import Calendar from '../../images/calendar-tick.svg';
 import Book from '../../images/car.svg';
 import Line from '../../images/Line.svg';
+import ImageWhyChooseUs from '../../images/image-why-choose-us.png';
 
 function HomePage() {
   return (
@@ -100,7 +103,12 @@ function HomePage() {
           </WrapperBlock>
         </WrapperStep>
       </WrapperHowItWork>
-      <WrapperWhyChooseUs></WrapperWhyChooseUs>
+      <WrapperWhyChooseUs>
+        <ImgWhyChooseUs>
+          <img src={ImageWhyChooseUs} alt="Cars Map" width="610px" />
+        </ImgWhyChooseUs>
+        <ContentWhyChooseUs></ContentWhyChooseUs>
+      </WrapperWhyChooseUs>
     </>
   );
 }
