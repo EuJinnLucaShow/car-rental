@@ -223,7 +223,10 @@ export const ImgWhyChooseUs = styled.div`
 `;
 
 export const ContentWhyChooseUs = styled.div`
-  /*  */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
 `;
 
 export const TitleWhyChooseUs = styled.h2`
@@ -254,4 +257,52 @@ export const SpanWhyChooseUs = styled.span`
   line-height: 124%; /* 39.68px */
   letter-spacing: 0.4px;
   text-transform: none;
+`;
+
+export const ListWhyChooseUs = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+`;
+
+export const ItemWhyChooseUs = styled.li`
+  display: flex;
+`;
+
+export const TitleItem = styled.h3`
+  color: #1d1e21;
+  font-family: 'GeomanistRegular';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.225px;
+`;
+
+export const ArticleItem = styled.article`
+  width: 300px;
+  color: #929395;
+  font-family: 'GeomanistRegular';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 144%; /* 20.16px */
+  letter-spacing: 0.14px;
+`;
+
+export const IconsItem = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #fff;
+
+  box-shadow: 0px 12px 32px 0px rgba(169, 169, 173, 0.16);
+
+  margin-right: 20px;
 `;
