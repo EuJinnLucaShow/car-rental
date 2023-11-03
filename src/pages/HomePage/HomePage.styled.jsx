@@ -204,6 +204,10 @@ export const StepArticle = styled.article`
 `;
 
 export const WrapperWhyChooseUs = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+
   margin-top: 132px;
   height: 662px;
   flex-shrink: 0;
@@ -215,9 +219,39 @@ export const WrapperWhyChooseUs = styled.div`
 `;
 
 export const ImgWhyChooseUs = styled.div`
-  margin-left: 140px;
+  /*  */
 `;
 
 export const ContentWhyChooseUs = styled.div`
-  /* margin-left: 140px; */
+  /*  */
+`;
+
+export const TitleWhyChooseUs = styled.h2`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+
+  color: #acaeb4;
+
+  font-family: 'GeomanistMedium';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%; /* 17.6px */
+  letter-spacing: 1.96px;
+  text-transform: uppercase;
+  margin-top: 90px;
+  width: 433px;
+`;
+
+export const SpanWhyChooseUs = styled.span`
+  color: #1d1e21;
+  font-family: 'GeomanistMedium';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 124%; /* 39.68px */
+  letter-spacing: 0.4px;
+  text-transform: none;
 `;

@@ -21,6 +21,8 @@ import {
   WrapperWhyChooseUs,
   ContentWhyChooseUs,
   ImgWhyChooseUs,
+  TitleWhyChooseUs,
+  SpanWhyChooseUs,
 } from './HomePage.styled';
 
 import AppStore from '../../images/app-store.png';
@@ -107,7 +109,14 @@ function HomePage() {
         <ImgWhyChooseUs>
           <img src={ImageWhyChooseUs} alt="Cars Map" width="610px" />
         </ImgWhyChooseUs>
-        <ContentWhyChooseUs></ContentWhyChooseUs>
+        <ContentWhyChooseUs>
+          <TitleWhyChooseUs>
+            Why choose us
+            <SpanWhyChooseUs>
+              We offer the best experience with our rental deals
+            </SpanWhyChooseUs>
+          </TitleWhyChooseUs>
+        </ContentWhyChooseUs>
       </WrapperWhyChooseUs>
     </>
   );
