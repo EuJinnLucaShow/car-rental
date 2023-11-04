@@ -59,10 +59,9 @@ function FavoritePage() {
           }
           return true;
         });
-
         setFilteredAdverts(filteredAdverts);
       } else {
-        setFilteredAdverts(catalog);
+        setFilteredAdverts([]);
       }
     }
   }, [filters, catalog, isFiltering]);
@@ -76,7 +75,7 @@ function FavoritePage() {
     : [];
   const minMileage = Math.min(...mileage);
   const maxMileage = Math.max(...mileage);
-
+  console.log(filters);
   return (
     <>
       <WrapperSelect>

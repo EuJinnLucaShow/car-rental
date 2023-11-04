@@ -26,6 +26,7 @@ export default function SelectForm({ makes, prices, onFilterChange }) {
   const makeOptions = makes.map(make => ({ value: make, label: make }));
 
   const priceRangeOptions = [];
+
   for (let i = 30; i <= 500; i += 10) {
     priceRangeOptions.push({ value: i, label: `${i}` });
   }
@@ -73,7 +74,6 @@ export default function SelectForm({ makes, prices, onFilterChange }) {
       minMileage: parseInt(minValue.replace(/,/g, ''), 10),
       maxMileage: parseInt(maxValue.replace(/,/g, ''), 10),
     };
-
     onFilterChange(newFilters);
   };
 
@@ -87,7 +87,7 @@ export default function SelectForm({ makes, prices, onFilterChange }) {
           value={selectedMake}
           onChange={selectedOption => setSelectedMake(selectedOption)}
           options={makeOptions}
-          isClearable={true}
+          isClearable
           styles={{
             control: styles => ({
               ...styles,
@@ -147,7 +147,7 @@ export default function SelectForm({ makes, prices, onFilterChange }) {
           }
           onChange={handlePriceStepChange}
           options={priceRangeOptions}
-          isClearable={true}
+          isClearable
           styles={{
             control: styles => ({
               ...styles,
